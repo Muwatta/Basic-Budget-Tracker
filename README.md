@@ -30,7 +30,7 @@ To run this project locally, follow these steps:
    ```
 
 3. **Open the project in a browser**
-   - Open `index.html` in any web browser.
+   - Open `[index.html](https://budget-tracker-modern.netlify.app/)` in any web browser.
 
 ## Usage
 1. Add your transactions by entering a description, amount, and category.
