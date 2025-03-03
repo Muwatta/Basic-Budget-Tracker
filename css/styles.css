@@ -1,0 +1,321 @@
+:root {
+  --primary-color: #28a745;
+  --primary-color-dark: #218838;
+  --secondary-color: #007bff;
+  --background-color: #f4f4f4;
+  --light-background: #ffffff;
+  --text-color: #333333;
+  --danger-color: #dc3545;
+  --warning-color: #ffc107;
+  --warning-color-dark: #e0a800;
+  --nav-height: 60px;
+  --box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Navigation Bar */
+.navbar {
+  background: var(--secondary-color);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: var(--nav-height);
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.container-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.navbar h2 {
+  font-size: 1.8rem;
+  color: #fff;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.navbar ul li {
+  margin: 0;
+}
+
+.navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: #ddd;
+}
+
+#toggle-theme {
+  background: #fff;
+  color: var(--secondary-color);
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#toggle-theme:hover {
+  background: #f0f0f0;
+}
+
+/* Hero Section */
+.hero {
+  background: #333;
+  padding: 60px 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+}
+
+/*=============================
+  Main Content Layout
+===============================*/
+.container {
+  max-width: 600px;
+  margin: 80px auto 20px; /* space below sticky nav */
+  background: var(--light-background);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: var(--box-shadow);
+}
+
+/* Balance Section */
+.balance-section {
+  margin-bottom: 20px;
+}
+
+.balance-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+/*=============================
+  Form Container
+===============================*/
+.form-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.form-container input,
+.form-container select,
+.form-container button {
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s;
+}
+
+.form-container input:focus,
+.form-container select:focus {
+  outline: none;
+  border-color: var(--secondary-color);
+}
+
+/*=============================
+  Button Styles
+===============================*/
+button {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: var(--primary-color-dark);
+}
+
+/* Edit Button */
+/* Container for transaction buttons */
+.transaction-actions {
+  display: flex;
+  gap: 5px; /* Adjust gap as needed */
+  align-items: center;
+}
+
+/* (Existing button styles remain unchanged) */
+.edit-btn {
+  background: var(--warning-color);
+  color: var(--text-color);
+  border: none;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.edit-btn:hover {
+  background: var(--warning-color-dark);
+}
+
+.delete-btn {
+  background: var(--danger-color);
+  color: #fff;
+  border: none;
+  padding: 6px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.delete-btn:hover {
+  background: darkred;
+}
+#transactions li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#transactions {
+  list-style: none;
+  margin-top: 20px;
+  padding: 0;
+}
+
+#transactions li {
+  background: var(--light-background);
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Income and Expense Indicators */
+.income {
+  border-left: 5px solid green;
+  padding-left: 10px;
+}
+
+.expense {
+  border-left: 5px solid red;
+  padding-left: 10px;
+}
+
+/* Export CSV Button */
+#export-csv {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--secondary-color);
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#export-csv:hover {
+  background-color: #0056b3;
+}
+
+/*=============================
+  Footer
+===============================*/
+.footer {
+  background: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-content p {
+  margin-bottom: 10px;
+  color: #;
+}
+.footer-content p {
+  margin-top: 10px;
+}
+.social-links {
+  list-style: none;
+  display: inline-flex;
+  gap: 15px;
+  padding: 0;
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+.social-links li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-links li a:hover {
+  color: #ddd;
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    height: 100px;
+  }
+  .container-nav h2 {
+    font-size: 1.2rem;
+    margin: 10px;
+  }
+  .container {
+    margin: 80px 10px 20px;
+    padding: 15px;
+  }
+  .navbar ul {
+    gap: 10px;
+    font-size: 1rem;
+  }
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  .hero-content p {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,117 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.header {
+  background: #007bff;
+  color: white;
+  padding: 15px;
+  font-size: 24px;
+  text-align: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0056b3;
+  color: white;
+  padding: 15px;
+  flex-wrap: wrap;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  background: #28a745;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+button:hover {
+  background: #218838;
+}
+
+/* Dark Mode */
+.dark-mode {
+  background-color: #121212;
+  color: #f4f4f4;
+}
+
+.dark-mode .navbar,
+.dark-mode .header,
+.dark-mode .footer {
+  background: #333;
+}
+
+.dark-mode button {
+  background: #ff9800;
+}
+
+.dark-mode button:hover {
+  background: #e68900;
+}
+
+.chart-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 20px auto;
+  max-width: 90%;
+}
+
+.chart-box {
+  flex: 1;
+  max-width: 600px;
+  min-width: 300px;
+}
+
+.pie-chart canvas {
+  max-width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 1 / 1;
+}
+
+.footer {
+  background: #333;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  margin-top: 30px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .header {
+    font-size: 20px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  button {
+    width: 80%;
+    max-width: 250px;
+    margin: 10px auto;
+  }
+
+  .chart-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .chart-box {
+    width: 90%;
+  }
+}
